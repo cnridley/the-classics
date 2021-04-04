@@ -1,0 +1,34 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+.memoryTitle{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.score{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}

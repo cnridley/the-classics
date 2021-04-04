@@ -1,0 +1,49 @@
+footer { /*-- styles the footer  --*/
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.chloe{ /*--styles designed and developed by chloe ridley --*/
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.classics{ /*-- style footer text 'the classics' --*/
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.gameCard{ /*--style each individual game card --*/
+    border: 15px white solid;
+    height: 400px;
+    padding: 60px;
+    justify-content: center;
+    background-color: whitesmoke;
+
+}
+
+.allGameCards {  /*-- centres the entire row that the game cards are in--*/
+    margin: auto;
+}
+
+.world { /*-- centres image of the world--*/
+    display: block;
+    margin: auto;
+}
+
+.matchTheFlags { /*-- styles match the flags title--*/
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
