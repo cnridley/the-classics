@@ -47,3 +47,15 @@ a:hover {
     text-decoration: none;
     color: black;
 }
+
+.header{
+    margin: auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+    font-size: 30px;
+}
+
+.headerRow{
+    background-color: whitesmoke;
+}
