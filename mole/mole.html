@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/mole.css" />
-    <link rel="stylesheet" href="../css/memory.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -48,7 +47,12 @@
     <div class="row container-fluid">
       <p class="memoryTitle"><a href="../index.html">Whack A Mole</a></p>
     </div>
-
+    <div class="row container-fluid ">
+        <p class="scoreAndTime">Score: <span id="score"></span></p>
+    </div>
+    <div class="row container-fluid scoreAndTime">
+        <p class="scoreAndTime">Time: <span id="time-left">60</span></p>
+    </div>
     <div class="grid">
         <div class="square" id="1"></div>
         <div class="square" id="2"></div>
