@@ -20,9 +20,9 @@ a:hover {
     border: 1px solid black;
 }
 
-.grid {
+.grid { /*-- display flex and flex flow will make the square 3x3 --*/
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; 
     justify-content: center;
     align-content: center;
     width: 618px;
@@ -31,7 +31,7 @@ a:hover {
     margin-bottom: 30px;
   }
 
-  .mole1{
+  .mole1{ /*-- Will be called in the JS file --*/
       background-image: url('../mole/images/mole1.png');
       background-size: cover;
   }
