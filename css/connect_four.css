@@ -1,0 +1,58 @@
+/*-- same styling for each game title --*/
+.memoryTitle{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.scoreAndTime {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+/*-- styling for game grid --*/
+
+.grid {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    height: 302px;
+    width: 352px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.taken {
+    border: white !important;
+}
+
+.grid div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.player-one {
+    background: yellow;
+    border-radius: 10px;
+}
+
+.player-two {
+    border-radius: 10px;
+    background: orange;
+}
