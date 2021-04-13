@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //function that deals with all the move outcomes of the snake. 
+    //deals with snake hitting wall 
     function moveOutcomes(){
         if (
             (currentSnake[0] + width >= (width * width ) && direction === width) || //hits bottom
@@ -40,15 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
             (currentSnake[0] - width < 0 && direction === -width) || //hits bottom
             squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
         ) {
-            return 
+            return clearInterval(interval) //if any of above happens it is gamover.
         }
+
+        const tail = currentSnake.pop() //removes last item of the snake array and shows it 
+        squares[tail].classList.remove('snake') //removes class of snake from the tail
+        currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head of the snake
+
+        // if snake gets apple
+        if(squares[currentSnake[0]].classList.contains('apple')) {
+            squares[currentSnake[0]].classList.remove('apple')
+            squares[tail].classList.add('snake')
+            currentSnake.push(tail)
+            randomApple()
+            score++
+            scoreDisplay.textContent = score
+            clearInterval(interval)
+            intervalTime = intervalTime * speed
+            interval = setInterval(moveOutcomes, intervalTime)
+          }
+          squares[currentSnake[0]].classList.add('snake')
     }
 
-    //deals with snake hitting wall 
-
-    // deals with snake hitting itself
 
 
+    
 
 
 
