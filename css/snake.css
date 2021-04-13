@@ -1,0 +1,46 @@
+.memoryTitle{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.scoreAndTime {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+.grid {
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border-style: solid;
+    margin-top: 20px;
+}
+
+.grid div {
+    width: 40px;
+    height: 40px;
+}
+
+.snake {
+    background-color: orange;
+}
+
+.apple {
+    background-color: red;
+}
