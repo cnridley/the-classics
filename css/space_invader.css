@@ -1,0 +1,55 @@
+.memoryTitle{
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.scoreAndTime {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: uppercase;
+  }
+
+  .grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 460px;
+      height: 460px;
+      border: solid;
+      margin: auto;
+  }
+
+  .grid div {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+  }
+
+.shooter {
+    background-color: yellow;
+}
+
+.invader {
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.boom {
+    background-color: red;
+}
+
+.lazer {
+    background-color: orangered;
+}
