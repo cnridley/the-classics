@@ -92,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
       alienInvaders[i] += direction;
     }
     for (let i = 0; i <= alienInvaders.length - 1; i++) {
-      squares[alienInvaders[i]].classList.add("invader");
+        if(!alienInvadersTakenDown.includes(i)){
+            squares[alienInvaders[i]].classList.add("invader");
+        } 
     }
 
     //decide if game is over
@@ -107,6 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDisplay.textContent = "Game Over";
         clearInterval(invaderId);
       }
+    }
+
+    //decide a win 
+    if(alienInvadersTakenDown.length === alienInvaders.length){
+        resultDisplay.textContent = "YOU WIN!"
+        clearInterval(invaderId)
     }
   }
 
@@ -141,12 +149,19 @@ document.addEventListener("DOMContentLoaded", () => {
           }
       }
     
-      document.addEventListener('keyup', e => {
-          if(e.keycode===32){
-              laserId = setInterval(moveLaser, 100)
-          }
-      })
+  //    document.addEventListener('keyup', e => {
+    //      if(e.keycode===32){
+     //         laserId = setInterval(moveLaser, 100)
+      //    }
+     // })
+
+     switch(e.keyCode){
+         case 32:
+            laserId = setInterval(moveLaser, 100)
+            break
+     }
   }
 
-  
+  document.addEventListener('keyup', shoot) 
+
 });
