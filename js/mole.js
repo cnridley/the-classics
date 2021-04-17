@@ -2,6 +2,7 @@ const square = document.querySelectorAll('.square')
 const mole1 = document.querySelectorAll('.mole1')
 const timeLeft = document.querySelector('#time-left')
 let score = document.querySelector('#score') // use a let as it will change throughout the game.
+const start = document.querySelector('#start')
 
 let result = 0
 let currentTime = timeLeft.textContent
@@ -38,6 +39,7 @@ function moveMole() {
 
 moveMole()
 
+
 function countDown() {
     currentTime--
     timeLeft.textContent = currentTime
@@ -47,6 +49,8 @@ function countDown() {
         alert('Time is up! Your final score is '+ result)
     }
 }
+
+
 
 let timerId = setInterval(countDown, 1000)
 
