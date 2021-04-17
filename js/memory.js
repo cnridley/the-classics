@@ -94,7 +94,7 @@ const displayResult = document.querySelector('#result')
 var cardsChosen = [] //empty array to store which cards were clicked on .
 var cardsChosenId = []
 var cardsWon = [] //cards will be push into this array when matched so they are removed from the game.
-
+let result = 0 
 // appends images onto the grid and creates the board game you see.
 function createBoard(){
     //use a for loop to loop through cardArray and for each card creat an image element called card.
@@ -120,7 +120,7 @@ function checkForMatch() {
     if(optionOneId == optionTwoId) { //if the two images are the same set it to the smiley face image.
       cards[optionOneId].setAttribute('src', '../memoryGame/images/smiley.jpeg')
       cards[optionTwoId].setAttribute('src', '../memoryGame/images/smiley.jpeg')
-      alert('You have clicked the same image!')
+      alert("You have clicked the same image!")
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -132,13 +132,15 @@ function checkForMatch() {
     } else { //if two images are not the same flip set to the world image. 
       cards[optionOneId].setAttribute('src', '../memoryGame/images/iconfinder_world_51942.png')
       cards[optionTwoId].setAttribute('src', '../memoryGame/images/iconfinder_world_51942.png')
+      result = result + 1
       
     }
     cardsChosen = [] //empties cardschosen array for next round
     cardsChosenId = [] //empties cardschosenId array for next round
-    displayResult.textContent = cardsWon.length
+    //displayResult.textContent = cardsWon.length
+    displayResult.textContent = result 
     if  (cardsWon.length === cardArray.length/2) {
-      displayResult.textContent = 'Congratulations! You found them all!'
+      displayResult.textContent = "Congratulations! Your score is " + result
     }
   }
 
