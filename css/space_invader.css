@@ -53,3 +53,22 @@ a:hover {
 .laser {
     background-color: orangered;
 }
+
+
+.modal-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.modal-button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: whitesmoke;
+    color: black;
+}

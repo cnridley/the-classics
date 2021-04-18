@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let result = 0;
   let direction = 1;
   let invaderId;
+  const start = document.querySelector("#start");
 
   //define the alien invaders by placing them in an array
   const alienInvaders = [
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", moveShooter);
 
   //move invaders on a time loop and move a row down each time.
+ 
   function moveInvaders() {
     const leftEdge = alienInvaders[0] % width === 0;
     const rightEdge =
@@ -117,8 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(invaderId)
     }
   }
-
+  //added event listener so invaders only move when start is clicked.
+  start.addEventListener('click', function(){
   invaderId = setInterval(moveInvaders, 300);
+  });
 
   //shoot at aliens 
   function shoot(e){
