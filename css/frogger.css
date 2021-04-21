@@ -1,52 +1,75 @@
-.memoryTitle{
-    margin: auto;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 30px;
-    font-size: 40px;
-    text-transform: uppercase;
+.memoryTitle {
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
-a{
-    color: black;
+a {
+  color: black;
 }
 a:hover {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .scoreAndTime {
-    margin: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    margin-top: 5px;
-    text-transform: uppercase;
-  }
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid;
-    height: 460px;
-    width: 460px;
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  height: 460px;
+  width: 460px;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .grid div {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .ending-block {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 .starting-block {
-    background-color: goldenrod;
+  background-color: goldenrod;
+}
+
+.c1 {
+  background-color: black;
+}
+
+.l1,
+.l2,
+.l3 {
+  background-color: brown;
+}
+
+.l4,
+.l5,
+.lf2,
+.lf3 {
+  background-color: lightblue;
+}
+
+.c2,
+.c3 {
+  background-color: grey;
 }
 
 .frog {
-    background-color: green;
+  background-color: green;
 }
