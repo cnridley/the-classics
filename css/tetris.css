@@ -38,3 +38,7 @@ a:hover {
   .block2 {
     background-color:red;
 }
+
+.tetromino {
+    background-color: blue;
+  }

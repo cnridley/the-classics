@@ -5,6 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const height = 20 
     let currentPosition = 4 
 
+    //add event listeners for key events 
+
+  function control(e) {
+    if(e.keyCode === 37) {
+      moveLeft()
+    } else if (e.keyCode === 38) {
+      rotate()
+    } else if (e.keyCode === 39) {
+      moveRight()
+    } else if (e.keyCode === 40) {
+      moveDown()
+    }
+  }
+  document.addEventListener('keyup', control)
+
     //the tetrominoes
     //drawers outs the four shapes in tetris with all their rotations. 
     const lTetromino = [
@@ -83,15 +98,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function moveLeft() {
-        unDraw()
+        undraw()
         const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
-        if(!isAtLefttEdge) currentPosition -= 1
-        if(current.some(index => squares[currentPosition + index].classList.contains('block2'))){
-            currentPosition += 1
+        if(!isAtLeftEdge) currentPosition -=1
+        if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+          currentPosition +=1
         }
         draw()
-    }
+      }
 
     //rotate tetromino
-
+    function rotate(){
+        unDraw()
+        currentRotation ++
+        if(currentRotation === current.length){
+            currentRotation = 0
+        }
+        current = theTetrominoes[random][currentRotation]
+        draw()
+    }
 })
