@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //draw the shape
   function draw() {
-    current.forEach((index) => {
+    current.forEach(index => {
       squares[currentPosition + index].classList.add("block");
     });
   }
@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function moveLeft() {
     undraw();
     const isAtLeftEdge = current.some(
-      (index) => (currentPosition + index) % width === 0
+      index => (currentPosition + index) % width === 0
     );
     if (!isAtLeftEdge) currentPosition -= 1;
     if (
-      current.some((index) =>
+      current.some(index =>
         squares[currentPosition + index].classList.contains("taken")
       )
     ) {
@@ -113,11 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function moveRight() {
     undraw();
     const isAtRightEdge = current.some(
-      (index) => (currentPosition + index) % width === width - 1
+      index => (currentPosition + index) % width === width - 1
     );
     if (!isAtRightEdge) currentPosition += 1;
     if (
-      current.some((index) =>
+      current.some(index =>
         squares[currentPosition + index].classList.contains("block2")
       )
     ) {
@@ -135,4 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
     current = theTetrominoes[random][currentRotation];
     draw();
   }
+
+  
 });
